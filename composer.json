@@ -1,0 +1,18 @@
+{
+  "name": "ultracod3/php-rdkafka",
+  "type": "library",
+  "description": "PHP Adapter for Kafka Message Queue Transport",
+  "keywords": ["queue", "kafka", "laravel"],
+  "license": "MIT",
+  "require": {
+    "php": "^8.2",
+    "ext-rdkafka": "^6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "UltraCod3\\PhpRdKafka\\": "src/"
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
