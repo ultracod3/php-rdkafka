@@ -78,6 +78,14 @@ class Consumer {
         }
     }
 
+    public function commit(VendorMessage|array|null $message_or_offsets = null): void {
+        if ($this->commit_async) {
+            $this->consumer->commitAsync($message_or_offsets);
+        } else {
+            $this->consumer->commit($message_or_offsets);
+        }
+    }
+
     public function reject(Message $message, bool $requeue = false): void {
         $this->acknowledge($message);
 
